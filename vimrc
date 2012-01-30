@@ -35,6 +35,21 @@ Bundle 'gmarik/vundle'
 " molokai theme
 Bundle 'mrtazz/molokai.vim'
 
+" nerdtree
+Bundle 'scrooloose/nerdtree'
+
+" powerline
+Bundle 'Lokaltog/vim-powerline'
+
+" pastie
+Bundle 'tpope/vim-pastie'
+
+" search complete
+Bundle 'SearchComplete'
+
+" align
+Bundle 'Align'
+
 "=== appearance =============================================================
 
 colorscheme molokai             " The colorscheme to use
@@ -48,12 +63,6 @@ set showcmd                     " show command in last line
 set cursorline                  " hilight the current line
 set number                      " use absolute line numbers
 set wrap                        " wrap long lines
-
-" set contents of status line
-set statusline=%t%m%r%h%w
-set statusline+=\ (%{strlen(&ft)?&ft:'none'}
-set statusline+=,\ %{(&fenc==\"\"?&enc:&fenc)})
-set statusline+=%=%3l:%03v\ %3p%%
 
 " close popup menu automatically
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
