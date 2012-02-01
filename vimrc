@@ -53,6 +53,9 @@ Bundle 'Rip-Rip/clang_complete'
 " mustang theme
 Bundle 'cschlueter/vim-mustang'
 
+" tComment
+Bundle 'tComment'
+
 "=== appearance =============================================================
 
 colorscheme molokai             " The colorscheme to use
