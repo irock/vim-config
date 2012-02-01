@@ -47,8 +47,11 @@ Bundle 'tpope/vim-pastie'
 " search complete
 Bundle 'SearchComplete'
 
-" align
-Bundle 'Align'
+" clang
+Bundle 'Rip-Rip/clang_complete'
+
+" mustang theme
+Bundle 'cschlueter/vim-mustang'
 
 "=== appearance =============================================================
 
@@ -120,4 +123,5 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 
 "=== hilighting =============================================================
 
-highlight SpellBad ctermbg=none ctermfg=red " incorrect spelling
+hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
+hi CursorLine cterm=none term=none gui=none
