@@ -26,6 +26,7 @@ set encoding=utf-8              " set internal encoding
 set scrolloff=4                 " scroll offset
 set visualbell                  " use visual bell
 set vb t_vb=                    " disable both audible and visible bell
+set t_Co=256                    " force 256 colors
 
 "=== plugins ================================================================
 
