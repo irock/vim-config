@@ -112,6 +112,17 @@ map     <C-B>       :tabprevious<CR>
 map     <leader>m   :Make<CR><CR><CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
 
+map     <Esc>1       :tabnext 1<CR>
+map     <Esc>2       :tabnext 2<CR>
+map     <Esc>3       :tabnext 3<CR>
+map     <Esc>4       :tabnext 4<CR>
+map     <Esc>5       :tabnext 5<CR>
+map     <Esc>6       :tabnext 6<CR>
+map     <Esc>7       :tabnext 7<CR>
+map     <Esc>8       :tabnext 8<CR>
+map     <Esc>9       :tabnext 9<CR>
+map     <Esc>0       :tabnext 10<CR>
+
 nnoremap <leader><space> :noh<cr>
 nnoremap j gj
 nnoremap k gk
