@@ -106,11 +106,13 @@ map     <leader>t   :tabnew<CR>
 map     <leader>n   :tabnext<CR>
 map     <leader>b   :tabprevious<CR>
 map     <leader>w   :tabclose<CR>
-map     <C-T>       :tabnext<CR>
-map     <C-B>       :tabprevious<CR>
-
 map     <leader>m   :Make<CR><CR><CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
+
+map     <C-h>       <C-w>h
+map     <C-j>       <C-w>j
+map     <C-k>       <C-w>k
+map     <C-l>       <C-w>l
 
 map     <Esc>1       :tabnext 1<CR>
 map     <Esc>2       :tabnext 2<CR>
