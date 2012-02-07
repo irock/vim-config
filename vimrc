@@ -55,6 +55,9 @@ Bundle 'cschlueter/vim-mustang'
 " tComment
 Bundle 'tComment'
 
+" matchit
+Bundle 'matchit.zip'
+
 "=== appearance =============================================================
 
 colorscheme molokai             " The colorscheme to use
