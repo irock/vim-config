@@ -38,15 +38,13 @@ Bundle 'mrtazz/molokai.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 " powerline
 Bundle 'Lokaltog/vim-powerline'
 
 " pastie
 Bundle 'tpope/vim-pastie'
-
-" search complete
-Bundle 'SearchComplete'
 
 " clang
 Bundle 'Rip-Rip/clang_complete'
@@ -109,6 +107,7 @@ map     <C-T>       :tabnext<CR>
 map     <C-B>       :tabprevious<CR>
 
 map     <leader>m   :Make<CR><CR><CR>
+map     <leader>e   :NERDTreeTabsToggle<CR>
 
 nnoremap <leader><space> :noh<cr>
 nnoremap j gj
