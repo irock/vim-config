@@ -12,4 +12,5 @@ let b:ftplugin_nasm_loaded = 1
 if exists('loaded_matchit')
     let b:match_words = '%if:%elif:%else:%endif,'
                     \ . '%macro:%endmacro'
+                    \ . '%rep:%endrep'
 endif
