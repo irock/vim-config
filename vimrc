@@ -18,6 +18,7 @@ call vundle#rc()
 "=== general ================================================================
 
 syntax on                       " syntax highlighting on.
+filetype plugin on              " turn on filetype plugin
 filetype plugin indent on       " required for vundle
 set modeline                    " file specific options
 set history=1000                " history size
@@ -45,9 +46,6 @@ Bundle 'Lokaltog/vim-powerline'
 
 " pastie
 Bundle 'tpope/vim-pastie'
-
-" clang
-Bundle 'Rip-Rip/clang_complete'
 
 " mustang theme
 Bundle 'cschlueter/vim-mustang'
@@ -100,6 +98,8 @@ set gdefault                    " use /g by default when doing replaces.
 "=== mappings ===============================================================
 
 let     mapleader=","           " use <comma> as leader
+let     maplocalleader=";"      " use <semicolon> as local leader
+
 imap    <C-l>       <ESC>
 
 map     <leader>t   :tabnew<CR>
