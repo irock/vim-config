@@ -59,6 +59,9 @@ Bundle 'matchit.zip'
 " indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
 
+" supertab
+Bundle 'ervandew/supertab'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
@@ -70,6 +73,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=234
+
+"===== supertab =============================================================
+
+" the default values seem to be reversed (?)
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
 
 "=== appearance =============================================================
 
