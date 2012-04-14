@@ -62,6 +62,9 @@ Bundle 'nathanaelkane/vim-indent-guides'
 " supertab
 Bundle 'ervandew/supertab'
 
+" latex box
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
