@@ -65,6 +65,9 @@ Bundle 'ervandew/supertab'
 " latex box
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
+" fugitive
+Bundle 'tpope/vim-fugitive'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
