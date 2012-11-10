@@ -74,6 +74,9 @@ Bundle 'irock/detectindent'
 " vimroom
 Bundle 'mikewest/vimroom'
 
+" hilight trailing whitespace
+Bundle 'bronson/vim-trailing-whitespace'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
@@ -195,3 +198,4 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 
 hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
 hi CursorLine cterm=none term=none gui=none
+autocmd BufRead,BufNewFile * hi ExtraWhitespace ctermbg=238 guibg=#382424
