@@ -71,6 +71,9 @@ Bundle 'tpope/vim-fugitive'
 " detect indent
 Bundle 'irock/detectindent'
 
+" vimroom
+Bundle 'mikewest/vimroom'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
@@ -92,6 +95,11 @@ let g:detectindent_min_indent = 2
 
 " detect indentation by default
 autocmd BufRead * :DetectIndent
+
+"===== vimroom ==============================================================
+
+" use full height for text
+let g:vimroom_sidebar_height = 0
 
 "=== appearance =============================================================
 
