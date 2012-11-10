@@ -109,9 +109,9 @@ autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
 
 set autoindent                  " copy indentation from current line to new line
 set smartindent                 " indent new line after e.g. {
-set tabstop=4                   " number of spaces that a tab is replaced with
-set shiftwidth=4                " number of spaces to use with autoindent
-set softtabstop=4               " number of spaces that a <Tab> counts for while
+set tabstop=2                   " number of spaces that a tab is replaced with
+set shiftwidth=2                " number of spaces to use with autoindent
+set softtabstop=2               " number of spaces that a <Tab> counts for while
                                 " performing editing operations
 set smarttab                    " replace tabs at start of line with spaces.
 set expandtab                   " use spaces instead of hard '\t' tabs
