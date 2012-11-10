@@ -111,6 +111,10 @@ set wrap                        " wrap long lines
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
     \ pclose|endif
 
+" show tabs as '» '
+set list
+set listchars=tab:»\ 
+
 "=== indentation ============================================================
 
 set autoindent                  " copy indentation from current line to new line
@@ -142,8 +146,11 @@ map     <leader>t   :tabnew<CR>
 map     <leader>n   :tabnext<CR>
 map     <leader>b   :tabprevious<CR>
 map     <leader>w   :tabclose<CR>
-map     <leader>m   :Make<CR><CR><CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
+
+" Make with quickfix
+command -nargs=* Make make <args> | cwindow 3
+map     <leader>m   :Make<CR><CR><CR>
 
 map     <C-h>       <C-w>h
 map     <C-j>       <C-w>j
