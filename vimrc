@@ -68,6 +68,9 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 " fugitive
 Bundle 'tpope/vim-fugitive'
 
+" detect indent
+Bundle 'irock/detectindent'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
@@ -77,9 +80,18 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=234
 
+"===== detectindent =========================================================
+
+let g:detectindent_preferred_expandtab = 1
+let g:detectindent_preferred_indent = 2
+let g:detectindent_max_lines_to_analyse = 4096
+let g:detectindent_min_indent = 2
+
+" detect indentation by default
+autocmd BufRead * :DetectIndent
 
 "=== appearance =============================================================
 
@@ -99,11 +111,10 @@ set wrap                        " wrap long lines
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
     \ pclose|endif
 
-
 "=== indentation ============================================================
 
 set autoindent                  " copy indentation from current line to new line
-set smartindent                 " indent new line after e.g. {
+set cindent                     " follow C indenting rules
 set tabstop=2                   " number of spaces that a tab is replaced with
 set shiftwidth=2                " number of spaces to use with autoindent
 set softtabstop=2               " number of spaces that a <Tab> counts for while
