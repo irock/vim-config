@@ -141,6 +141,7 @@ set showcmd                     " show command in last line
 set cursorline                  " hilight the current line
 set number                      " use absolute line numbers
 set wrap                        " wrap long lines
+set splitright                  " open new vsplit windows to the right
 
 " close popup menu automatically
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
