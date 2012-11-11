@@ -77,6 +77,21 @@ Bundle 'mikewest/vimroom'
 " hilight trailing whitespace
 Bundle 'bronson/vim-trailing-whitespace'
 
+" file-line
+Bundle 'file-line'
+
+" visual-star
+Bundle 'thinca/vim-visualstar'
+
+" markdown
+Bundle 'hallison/vim-markdown'
+
+" date incrementing
+Bundle 'tpope/vim-speeddating'
+
+" gitv
+Bundle 'gregsexton/gitv'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
