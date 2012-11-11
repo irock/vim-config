@@ -89,6 +89,9 @@ Bundle 'hallison/vim-markdown'
 " date incrementing
 Bundle 'tpope/vim-speeddating'
 
+" tagbar
+Bundle 'majutsushi/tagbar'
+
 " gitv
 Bundle 'gregsexton/gitv'
 
@@ -118,6 +121,12 @@ autocmd BufRead * :DetectIndent
 
 " use full height for text
 let g:vimroom_sidebar_height = 0
+
+"===== tagbar ===============================================================
+
+let g:tagbar_compact = 1
+let g:tagbar_singleclick = 1
+let g:tagbar_indent = 1
 
 "=== appearance =============================================================
 
@@ -173,6 +182,7 @@ map     <leader>n   :tabnext<CR>
 map     <leader>b   :tabprevious<CR>
 map     <leader>w   :tabclose<CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
+map     <leader>c   :TagbarToggle<CR>
 
 " Make with quickfix
 command -nargs=* Make make <args> | cwindow 3
