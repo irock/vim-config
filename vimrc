@@ -95,6 +95,9 @@ Bundle 'majutsushi/tagbar'
 " gitv
 Bundle 'gregsexton/gitv'
 
+" wiki for vim
+Bundle 'vimwiki'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
@@ -127,6 +130,16 @@ let g:vimroom_sidebar_height = 0
 let g:tagbar_compact = 1
 let g:tagbar_singleclick = 1
 let g:tagbar_indent = 1
+
+"===== vimwiki ==============================================================
+
+let work_wiki = {}
+let work_wiki.path = '~/docs/wiki/work'
+
+let personal_wiki = {}
+let personal_wiki.path = '~/docs/wiki/personal'
+
+let g:vimwiki_list = [work_wiki, personal_wiki]
 
 "=== appearance =============================================================
 
@@ -178,10 +191,10 @@ let     maplocalleader=";"      " use <semicolon> as local leader
 
 imap    <C-l>       <ESC>
 
-map     <leader>t   :tabnew<CR>
+map     <leader>tt  :tabnew<CR>
 map     <leader>n   :tabnext<CR>
 map     <leader>b   :tabprevious<CR>
-map     <leader>w   :tabclose<CR>
+map     <leader>tw  :tabclose<CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
 map     <leader>c   :TagbarToggle<CR>
 
