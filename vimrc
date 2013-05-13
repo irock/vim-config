@@ -59,6 +59,9 @@ Bundle 'matchit.zip'
 " indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
 
+" A fuzzy code completion engine
+Bundle 'Valloric/YouCompleteMe'
+
 " supertab
 Bundle 'ervandew/supertab'
 
@@ -70,9 +73,6 @@ Bundle 'tpope/vim-fugitive'
 
 " detect indent
 Bundle 'irock/detectindent'
-
-" vimroom
-Bundle 'mikewest/vimroom'
 
 " hilight trailing whitespace
 Bundle 'bronson/vim-trailing-whitespace'
@@ -97,6 +97,15 @@ Bundle 'gregsexton/gitv'
 
 " wiki for vim
 Bundle 'vimwiki'
+
+" Git gutter
+Bundle 'airblade/vim-gitgutter'
+
+" Indexed search
+Bundle 'IndexedSearch'
+
+" Ctrl-P
+Bundle 'kien/ctrlp.vim'
 
 "==== plugin configuration ==================================================
 
@@ -140,6 +149,10 @@ let personal_wiki = {}
 let personal_wiki.path = '~/docs/wiki/personal'
 
 let g:vimwiki_list = [work_wiki, personal_wiki]
+
+"===== YouCompleteMe ========================================================
+
+"let g:ycm_filetype_specific_completion_to_disable = { 'cpp': 1, }
 
 "=== appearance =============================================================
 
