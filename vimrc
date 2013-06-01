@@ -175,10 +175,6 @@ set splitright                  " open new vsplit windows to the right
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
     \ pclose|endif
 
-" show tabs as '» '
-set list
-set listchars=tab:»\ 
-
 "=== indentation ============================================================
 
 set autoindent                  " copy indentation from current line to new line
