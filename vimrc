@@ -59,7 +59,7 @@ Bundle 'matchit.zip'
 " indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
 
-if v:version >= 703
+if 0 && v:version >= 703
 " A fuzzy code completion engine
 Bundle 'Valloric/YouCompleteMe'
 endif
