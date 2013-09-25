@@ -7,6 +7,9 @@
 "
 "============================================================================
 
+" clear autocommands
+autocmd!
+
 "=== vundle =================================================================
 
 set nocompatible                " drop vi compatibility
@@ -27,7 +30,7 @@ set encoding=utf-8              " set internal encoding
 set scrolloff=4                 " scroll offset
 set visualbell                  " use visual bell
 set vb t_vb=                    " disable both audible and visible bell
-set t_Co=256                    " force 256 colors
+set background=dark
 
 "=== plugins ================================================================
 
@@ -36,6 +39,12 @@ Bundle 'gmarik/vundle'
 
 " molokai theme
 Bundle 'mrtazz/molokai.vim'
+
+" solarized theme
+Bundle 'altercation/vim-colors-solarized'
+
+" summerfruit256 theme
+Bundle 'vim-scripts/summerfruit256.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
@@ -118,9 +127,6 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=234
-
 "===== detectindent =========================================================
 
 let g:detectindent_preferred_expandtab = 1
@@ -158,7 +164,17 @@ let g:vimwiki_list = [work_wiki, personal_wiki]
 
 "=== appearance =============================================================
 
-colorscheme molokai             " The colorscheme to use
+let s:colorschemes = ['molokai', 'hemisu', 'summerfruit256', 'solarized']
+let s:colorschemes_idx = 0
+
+function! s:LoadColorscheme()
+    execute 'colorscheme '.s:colorschemes[s:colorschemes_idx]
+endfunction
+
+function! s:ShiftColorscheme()
+    let s:colorschemes_idx = (s:colorschemes_idx + 1) % len(s:colorschemes)
+    call s:LoadColorscheme()
+endfunction
 
 set showmatch                   " jump to matching bracket and back when inserted
 set matchtime=3                 " time for showmatch
@@ -174,6 +190,8 @@ set splitright                  " open new vsplit windows to the right
 " close popup menu automatically
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent!
     \ pclose|endif
+
+let g:solarized_termcolors=256  " use 256 colors for solarized colorscheme
 
 "=== indentation ============================================================
 
@@ -210,8 +228,11 @@ map     <leader>e   :NERDTreeTabsToggle<CR>
 map     <leader>c   :TagbarToggle<CR>
 
 " Make with quickfix
-command -nargs=* Make make <args> | cwindow 3
+command! -nargs=* Make make <args> | cwindow 3
 map     <leader>m   :Make<CR><CR><CR>
+
+command! ShiftColorscheme call s:ShiftColorscheme()
+command! LoadColorscheme call s:LoadColorscheme()
 
 map     <C-h>       <C-w>h
 map     <C-j>       <C-w>j
@@ -246,6 +267,24 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 
 "=== hilighting =============================================================
 
-hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
-hi CursorLine cterm=none term=none gui=none
-autocmd BufRead,BufNewFile * hi ExtraWhitespace ctermbg=238 guibg=#382424
+function! s:InitColors()
+  augroup InitColors
+  au!
+  if &background == 'dark'
+      hi IndentGuidesOdd  guibg=none ctermbg=236
+      hi IndentGuidesEven guibg=none ctermbg=234
+  else
+      hi IndentGuidesOdd  guibg=none ctermbg=253
+      hi IndentGuidesEven guibg=none ctermbg=252
+  endif
+
+  hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
+  hi CursorLine cterm=none term=none gui=none
+  autocmd VimEnter * :hi ExtraWhitespace ctermbg=238 guibg=#382424
+  augroup END
+endfunction
+
+autocmd ColorScheme * :call s:InitColors()
+
+" Load colorscheme last, to be sure all hooks have been initialized
+call s:LoadColorscheme()
