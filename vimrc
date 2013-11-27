@@ -76,8 +76,10 @@ endif
 " supertab
 Bundle 'ervandew/supertab'
 
+if 0
 " latex box
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+endif
 
 " fugitive
 Bundle 'tpope/vim-fugitive'
