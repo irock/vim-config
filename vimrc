@@ -118,9 +118,6 @@ Bundle 'IndexedSearch'
 " Ctrl-P
 Bundle 'kien/ctrlp.vim'
 
-" numbers.vim
-Bundle 'myusuf3/numbers.vim'
-
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
