@@ -122,6 +122,9 @@ endif
 " Ctrl-P
 Bundle 'kien/ctrlp.vim'
 
+" A.vim (switch between header and source file easily)
+Bundle 'a.vim'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
