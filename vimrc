@@ -114,8 +114,10 @@ Bundle 'vimwiki'
 " Git gutter
 Bundle 'airblade/vim-gitgutter'
 
+if 0
 " Indexed search
 Bundle 'IndexedSearch'
+endif
 
 " Ctrl-P
 Bundle 'kien/ctrlp.vim'
@@ -164,6 +166,11 @@ let g:vimwiki_list = [work_wiki, personal_wiki]
 
 "let g:ycm_filetype_specific_completion_to_disable = { 'cpp': 1, }
 
+"==== gitgutter =============================================================
+
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
 "=== appearance =============================================================
 
 let s:colorschemes = ['molokai', 'hemisu', 'summerfruit256', 'solarized']
@@ -184,7 +191,7 @@ set wildmenu                    " command line completion
 set ruler                       " show the ruler
 set laststatus=2                " always show status line.
 set showcmd                     " show command in last line
-set cursorline                  " hilight the current line
+set nocursorline                " don't hilight the current line (faster)
 set number                      " use absolute line numbers
 set wrap                        " wrap long lines
 set splitright                  " open new vsplit windows to the right
@@ -227,7 +234,8 @@ map     <leader>n   :tabnext<CR>
 map     <leader>b   :tabprevious<CR>
 map     <leader>tw  :tabclose<CR>
 map     <leader>e   :NERDTreeTabsToggle<CR>
-map     <leader>c   :TagbarToggle<CR>
+map     <leader>tb  :TagbarToggle<CR>
+map     <leader>c   :TComment
 
 " Make with quickfix
 command! -nargs=* Make make <args> | cwindow 3
@@ -261,6 +269,8 @@ vnoremap <F1> <ESC>
 nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 inoremap jj <ESC>
+nnoremap <leader>c :TComment<cr>
+vnoremap <leader>c :TComment<cr>
 
 "=== filetypes ==============================================================
 
