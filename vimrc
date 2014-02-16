@@ -287,13 +287,8 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 function! s:InitColors()
   augroup InitColors
   au!
-  if &background == 'dark'
-      hi IndentGuidesOdd  guibg=none ctermbg=236
-      hi IndentGuidesEven guibg=none ctermbg=234
-  else
-      hi IndentGuidesOdd  guibg=none ctermbg=253
-      hi IndentGuidesEven guibg=none ctermbg=252
-  endif
+  hi IndentGuidesOdd  guibg=none ctermbg=236
+  hi IndentGuidesEven guibg=none ctermbg=234
 
   hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
   hi CursorLine cterm=none term=none gui=none
