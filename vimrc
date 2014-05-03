@@ -31,6 +31,7 @@ set scrolloff=4                 " scroll offset
 set visualbell                  " use visual bell
 set vb t_vb=                    " disable both audible and visible bell
 set background=dark
+set switchbuf+=split
 
 "=== plugins ================================================================
 
@@ -176,6 +177,7 @@ let g:vimwiki_list = [work_wiki, personal_wiki]
 
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+let g:gitgutter_sign_column_always = 1
 
 "=== appearance =============================================================
 
