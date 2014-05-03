@@ -76,6 +76,9 @@ endif
 " supertab
 Bundle 'ervandew/supertab'
 
+" AutoComplPop
+Bundle 'AutoComplPop'
+
 if 0
 " latex box
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
