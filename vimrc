@@ -179,6 +179,10 @@ let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_sign_column_always = 1
 
+"==== eclim =================================================================
+
+let g:EclimCompletionMethod = 'omnifunc'
+
 "=== appearance =============================================================
 
 let s:colorschemes = ['molokai', 'hemisu', 'summerfruit256', 'solarized']
@@ -232,6 +236,15 @@ set smartcase                   " if search contains mixed case, do a case sensi
                                 " search
 set gdefault                    " use /g by default when doing replaces.
 
+"=== code completion ========================================================
+
+set completeopt=longest,menuone
+
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o>"
+imap <C-@> <C-Space>
+
 "=== mappings ===============================================================
 
 let     mapleader=","           " use <comma> as leader
@@ -239,17 +252,17 @@ let     maplocalleader=";"      " use <semicolon> as local leader
 
 imap    <C-l>       <ESC>
 
-map     <leader>tt  :tabnew<CR>
-map     <leader>n   :tabnext<CR>
-map     <leader>b   :tabprevious<CR>
-map     <leader>tw  :tabclose<CR>
-map     <leader>e   :NERDTreeTabsToggle<CR>
-map     <leader>tb  :TagbarToggle<CR>
+map     <leader>tt  :tabnew<cr>
+map     <leader>n   :tabnext<cr>
+map     <leader>b   :tabprevious<cr>
+map     <leader>tw  :tabclose<cr>
+map     <leader>e   :NERDTreeTabsToggle<cr>
+map     <leader>tb  :TagbarToggle<cr>
 map     <leader>c   :TComment
 
 " Make with quickfix
 command! -nargs=* Make make <args> | cwindow 3
-map     <leader>m   :Make<CR><CR><CR>
+map     <leader>m   :Make<cr><cr><cr>
 
 command! ShiftColorscheme call s:ShiftColorscheme()
 command! LoadColorscheme call s:LoadColorscheme()
@@ -259,18 +272,20 @@ map     <C-j>       <C-w>j
 map     <C-k>       <C-w>k
 map     <C-l>       <C-w>l
 
-map     <Esc>1       :tabnext 1<CR>
-map     <Esc>2       :tabnext 2<CR>
-map     <Esc>3       :tabnext 3<CR>
-map     <Esc>4       :tabnext 4<CR>
-map     <Esc>5       :tabnext 5<CR>
-map     <Esc>6       :tabnext 6<CR>
-map     <Esc>7       :tabnext 7<CR>
-map     <Esc>8       :tabnext 8<CR>
-map     <Esc>9       :tabnext 9<CR>
-map     <Esc>0       :tabnext 10<CR>
+map     <Esc>1       :tabnext 1<cr>
+map     <Esc>2       :tabnext 2<cr>
+map     <Esc>3       :tabnext 3<cr>
+map     <Esc>4       :tabnext 4<cr>
+map     <Esc>5       :tabnext 5<cr>
+map     <Esc>6       :tabnext 6<cr>
+map     <Esc>7       :tabnext 7<cr>
+map     <Esc>8       :tabnext 8<cr>
+map     <Esc>9       :tabnext 9<cr>
+map     <Esc>0       :tabnext 10<cr>
 
 nnoremap <leader><space> :noh<cr>
+nnoremap <leader>jd :JavaSearchContext<cr>
+nnoremap <leader>jh :JavaDocSearch<cr>
 nnoremap j gj
 nnoremap k gk
 inoremap <F1> <ESC>
@@ -292,8 +307,11 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 function! s:InitColors()
   augroup InitColors
   au!
-  hi IndentGuidesOdd  guibg=none ctermbg=236
-  hi IndentGuidesEven guibg=none ctermbg=234
+  hi IndentGuidesOdd  guibg=none ctermbg=235
+  hi IndentGuidesEven guibg=none ctermbg=236
+  hi Normal ctermbg=234
+  hi Pmenu ctermbg=237 ctermfg=254
+  hi PmenuSel ctermbg=214 ctermfg=234
 
   hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
   hi CursorLine cterm=none term=none gui=none
