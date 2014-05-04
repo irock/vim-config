@@ -299,6 +299,7 @@ map     <Esc>0       :tabnext 10<cr>
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>jd :JavaSearchContext<cr>
 nnoremap <leader>jh :JavaDocSearch<cr>
+nnoremap <leader>ji :JavaImport<cr>
 nnoremap j gj
 nnoremap k gk
 inoremap <F1> <ESC>
