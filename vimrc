@@ -272,6 +272,7 @@ map     <leader>tw  :tabclose<cr>
 map     <leader>e   :NERDTreeTabsToggle<cr>
 map     <leader>tb  :TagbarToggle<cr>
 map     <leader>c   :TComment
+map     <leader>p   :r! cat<cr>
 
 " Make with quickfix
 command! -nargs=* Make make <args> | cwindow 3
