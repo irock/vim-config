@@ -337,3 +337,14 @@ autocmd ColorScheme * :call s:InitColors()
 
 " Load colorscheme last, to be sure all hooks have been initialized
 call s:LoadColorscheme()
+
+"=== utilities ==============================================================
+
+"==== create dirs on save ===================================================
+
+function WriteCreatingDirs()
+  execute ':silent !mkdir -p %:h'
+  write
+endfunction
+
+command W call WriteCreatingDirs()
