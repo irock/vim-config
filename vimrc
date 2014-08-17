@@ -77,8 +77,10 @@ endif
 " supertab
 Bundle 'ervandew/supertab'
 
+if 0
 " AutoComplPop
 Bundle 'AutoComplPop'
+endif
 
 if 0
 " latex box
@@ -249,7 +251,7 @@ set gdefault                    " use /g by default when doing replaces.
 
 "=== code completion ========================================================
 
-set completeopt=longest,menuone
+set completeopt=menuone
 
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\<lt>C-n>" :
