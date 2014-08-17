@@ -238,8 +238,6 @@ set softtabstop=2               " number of spaces that a <Tab> counts for while
 set smarttab                    " replace tabs at start of line with spaces.
 set expandtab                   " use spaces instead of hard '\t' tabs
 
-set cinkeys-=0#                 " don't reset indentation when inserting a #
-
 "=== searching ==============================================================
 
 set hlsearch                    " highlighting of search terms.
