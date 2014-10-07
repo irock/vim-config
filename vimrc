@@ -329,7 +329,7 @@ function! s:InitColors()
   hi PmenuSel ctermbg=214 ctermfg=234
 
   hi SpellBad ctermbg=none ctermfg=red " incorrect spelling
-  hi CursorLine cterm=none term=none gui=none
+  hi CursorLine cterm=none ctermbg=235 cterm=none gui=none
   autocmd VimEnter * :hi ExtraWhitespace ctermbg=238 guibg=#382424
   augroup END
 endfunction
