@@ -31,7 +31,7 @@ set scrolloff=4                 " scroll offset
 set visualbell                  " use visual bell
 set vb t_vb=                    " disable both audible and visible bell
 set background=dark
-set switchbuf+=split
+set switchbuf=useopen
 
 "=== plugins ================================================================
 
