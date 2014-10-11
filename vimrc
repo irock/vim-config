@@ -32,6 +32,7 @@ set visualbell                  " use visual bell
 set vb t_vb=                    " disable both audible and visible bell
 set background=dark
 set switchbuf=useopen
+set shortmess=aotTOI
 
 "=== plugins ================================================================
 
@@ -279,6 +280,8 @@ map     <leader>e   :NERDTreeToggle<cr>
 map     <leader>tb  :TagbarToggle<cr>
 map     <leader>c   :TComment
 map     <leader>p   :r! cat<cr>
+map     <leader>h   :r! cat<cr>
+map     <leader>g   :silent Ggrep 
 
 " Make with quickfix
 command! -nargs=* Make make <args> | cwindow 3
@@ -317,6 +320,9 @@ nnoremap <leader>v V`]
 inoremap jj <ESC>
 nnoremap <leader>c :TComment<cr>
 vnoremap <leader>c :TComment<cr>
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 "=== filetypes ==============================================================
 
