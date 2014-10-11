@@ -197,6 +197,13 @@ function MeetsForJavaEclim(context)
       \ }]
     \ }
 
+"==== ctrlp =================================================================
+
+let g:ctrlp_by_filename = 1
+let g:ctrlp_regexp = 1
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
 "=== appearance =============================================================
 
 let s:colorschemes = ['molokai', 'hemisu', 'summerfruit256', 'solarized']
