@@ -49,7 +49,6 @@ Bundle 'vim-scripts/summerfruit256.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 
 " powerline
 Bundle 'Lokaltog/vim-powerline'
@@ -269,7 +268,7 @@ map     <leader>tt  :tabnew<cr>
 map     <leader>n   :tabnext<cr>
 map     <leader>b   :tabprevious<cr>
 map     <leader>tw  :tabclose<cr>
-map     <leader>e   :NERDTreeTabsToggle<cr>
+map     <leader>e   :NERDTreeToggle<cr>
 map     <leader>tb  :TagbarToggle<cr>
 map     <leader>c   :TComment
 map     <leader>p   :r! cat<cr>
