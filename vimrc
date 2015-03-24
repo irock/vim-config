@@ -239,7 +239,6 @@ let g:solarized_termcolors=256  " use 256 colors for solarized colorscheme
 "=== indentation ============================================================
 
 set autoindent                  " copy indentation from current line to new line
-set cindent                     " follow C indenting rules
 set tabstop=2                   " number of spaces that a tab is replaced with
 set shiftwidth=2                " number of spaces to use with autoindent
 set softtabstop=2               " number of spaces that a <Tab> counts for while
