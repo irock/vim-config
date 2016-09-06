@@ -333,8 +333,8 @@ autocmd BufRead,BufNewFile *.tex set ft=tex
 function! s:InitColors()
   augroup InitColors
   au!
-  hi IndentGuidesOdd  guibg=none ctermbg=235
-  hi IndentGuidesEven guibg=none ctermbg=236
+  hi IndentGuidesOdd ctermbg=235
+  hi IndentGuidesEven ctermbg=236
   hi Normal ctermbg=234
   hi Pmenu ctermbg=237 ctermfg=254
   hi PmenuSel ctermbg=214 ctermfg=234
