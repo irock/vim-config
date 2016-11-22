@@ -327,6 +327,7 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 autocmd BufRead,BufNewFile *.asm set ft=nasm
 autocmd BufRead,BufNewFile *.tex set ft=tex
+autocmd BufRead,BufNewFile *.md set ft=markdown
 
 "=== hilighting =============================================================
 
