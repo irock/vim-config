@@ -131,6 +131,11 @@ Bundle 'kien/ctrlp.vim'
 " A.vim (switch between header and source file easily)
 Bundle 'a.vim'
 
+" JavaScript support
+Bundle 'pangloss/vim-javascript'
+" TypeScript syntax
+Bundle 'leafgarland/typescript-vim'
+
 "==== plugin configuration ==================================================
 
 "===== indent guides ========================================================
